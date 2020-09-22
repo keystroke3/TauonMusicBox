@@ -24,12 +24,9 @@ p {
     display: flex;
     height: 30%;
     width: 100%;
-    margin-bottom: 5%;
+    /* margin-bottom: 5%; */
 }
-/* #img-holder {
-    width: 50%;
-    background-color: #33333334;
-} */
+
 #picture {
     width: 100%;
     height: auto;
@@ -63,16 +60,28 @@ p {
     margin-bottom: 5px;
 }
 
-#lyrics {
-    color: #ccc;
+#lyrics-container {
     max-width: 50vw;
-    max-height: 30vh;
+    max-height: 50vh;
+    background-image: linear-gradient(
+        #111 10%,
+        #ccc 20%,
+        #ccc 80%,
+        #111 90%
+    );
+    background-clip: text;
+}
+#lyrics{
+    max-height: inherit;
+    max-width: inherit;
+    color: #ccc;
     overflow-y: scroll;
     overflow-x: hidden;
     text-align: left;
-    /* margin-left: auto;
-    margin-right: auto; */
     scrollbar-color: #111 #111;
+    color: transparent;
+    /* padding-bottom: 10%; */
+
 }
 #lyrics:hover {
     scrollbar-color: #222 #111;
@@ -88,7 +97,7 @@ p {
 
 #seekfront {
     height: 15px;
-    max-width: 100%;
+    max-width: 80%;
     background-color: rgb(50, 50, 150);
 }
 
@@ -179,14 +188,14 @@ p {
     width: 150px;
     display: flex;
 }
-.vol-icons{
+.vol-icons {
     width: 15px;
     margin-top: 5px;
 }
-#vol-up{
+#vol-up {
     margin-left: 5px;
 }
-#vol-down{
+#vol-down {
     margin-right: 5px;
 }
 input[type="range"] {
@@ -280,7 +289,7 @@ input[type="range"]:focus::-ms-fill-upper {
 
 /* //////// Mobile Oprimizations //////// */
 
-@media (max-device-width: 700px) {
+/* @media (max-device-width: 700px) {
     .container {
         padding-right: 200px;
         margin-left: auto;
@@ -295,9 +304,6 @@ input[type="range"]:focus::-ms-fill-upper {
         margin-left: 0;
         width: 90%;
     }
-    /* #img-holder {
-        width: 100%;
-    } */
     #picture {
         width: 85%;
         background-color: #33333334;
@@ -321,38 +327,37 @@ input[type="range"]:focus::-ms-fill-upper {
     .slidecontainer {
         width: 50%;
     }
-    .slidecontainer div{
+    .slidecontainer div {
         margin-right: 10px;
     }
-    .vol-icons{
+    .vol-icons {
         width: 50px;
     }
     #vol-slider {
         height: 50px;
         width: 300px;
     }
-    #seekback{
+    #seekback {
         height: 50px;
         width: 93%;
     }
-    #seekfront{
+    #seekfront {
         height: 50px;
         width: 93%;
     }
 
-    input[type=range]::-webkit-slider-thumb {
-      height: 100%;
-      width: 40px;
-      border: 0;
+    input[type="range"]::-webkit-slider-thumb {
+        height: 100%;
+        width: 40px;
+        border: 0;
     }
-    
-    input[type=range]::-moz-range-thumb {
-      height: 100%;
-      width: 40px;
-      border: 0;
-    }
-}
 
+    input[type="range"]::-moz-range-thumb {
+        height: 100%;
+        width: 40px;
+        border: 0;
+    }
+} */
 
 /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
 how to remove the virtical space around the range input in IE*/

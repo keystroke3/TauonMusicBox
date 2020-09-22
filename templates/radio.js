@@ -34,7 +34,9 @@ function setArt() {
         document.getElementById("song-title").innerText = data.title;
         document.getElementById("album-name").innerText = data.album;
         document.getElementById("artist").innerText = data.artist;
-        document.getElementById("lyrics").innerHTML = data.lyrics;
+        document.getElementById("lyrics").innerHTML = "<br><br><br>" + data.lyrics + "<br><br><br>";
+        // <br> in lrycis are to create space at the start and end of the text to "remove" the fade
+        // amd to indicate that there is nothing at the start and end fo the text.
     };
 
     request.send();
