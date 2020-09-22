@@ -1,6 +1,15 @@
 
 Changelog-------------------------------------
 
+v6.3.2
+
+ - Improved broadcast page
+  - Redesigned layout to a centered style
+  - Added metadata delay to improve perceived synchronisation
+  - Added sourcing lyrics from lrc files (static)
+  - Fixed no spaces in text bug
+ - Fixed global search crash with Spotify when not enabled
+
 v6.3.1
 
  - Enabled picture menu for showcase album art
